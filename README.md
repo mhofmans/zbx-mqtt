@@ -9,10 +9,9 @@ Make sure you have a MQTT Broker running. <a href="https://mosquitto.org">Mosqui
 Open the Python script ```zbxmqtt.py``` and set the variables.
 
 ```php
-ZabbixServer="x.x.x.x" # Enter Zabbix server IP.
-ZabbixPort= # Enter Zabbix server Port, default is 10051.
-
-# Change the broker IP
+ZabbixServer="x.x.x.x" # zabbix ip
+ZabbixPort=10050 # zabbix listening port default 10050
+Broker="x.x.x.x" # broker ip
 ```
 
 Run ZBXMQTT as you prefer. This script is responsible for receiving MQTT data and sending it to Zabbix server, so make sure it is running all the time.
