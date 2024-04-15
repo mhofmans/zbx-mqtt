@@ -1,0 +1,14 @@
+# /lib/systemd/system
+[Unit]
+Description=ZBXMQTT
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/local/bin/ZBXMQTT
+ExecStart=/usr/bin/python3 zbxmqtt/zbxmqtt.py
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
