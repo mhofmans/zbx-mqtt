@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 from pyzabbix import ZabbixMetric, ZabbixSender
 
 ZabbixServer="x.x.x.x"
-ZabbixPort=# default 10051
+ZabbixPort=# default 10050
 
 
 # The callback for when the client receives a CONNACK response from the server.
