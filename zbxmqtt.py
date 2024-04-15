@@ -1,8 +1,8 @@
 import paho.mqtt.client as mqtt
 from pyzabbix import ZabbixMetric, ZabbixSender
 
-ZabbixServer="172.28.3.150"
-ZabbixPort=10051
+ZabbixServer="x.x.x.x"
+ZabbixPort=10051 # default
 
 
 # The callback for when the client receives a CONNACK response from the server.
@@ -27,7 +27,7 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 mqttc.on_connect = on_connect
 mqttc.on_message = on_message
 
-mqttc.connect("172.28.3.152", 1883, 60)
+mqttc.connect("x.x.x.x", 1883, 60) # broker
 
 # Blocking call that processes network traffic, dispatches callbacks and
 # handles reconnecting.
