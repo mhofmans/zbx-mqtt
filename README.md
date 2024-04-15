@@ -28,7 +28,7 @@ Now we have created the host including our first item, we need to change one mor
 Inside the ```zbxmqtt.py``` script we subscribe to a specific topic.
 Make sure you change this to your ```hostname.itemkey``` which you just created.
 You can also subscribe to all topics by changing this value to ```#```.
-Subscribing to ```#``` gives you a subscription to everything except for topics that start with a $ (these are normally control topics anyway).
+Subscribing to ```#``` gives you a subscription to everything except for topics that start with a ```$``` (these are normally control topics anyway).
 
 ```php
 client.subscribe("host.itemkey")
