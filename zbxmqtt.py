@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 from pyzabbix import ZabbixMetric, ZabbixSender
 
 ZabbixServer="x.x.x.x" # zabbix ip
-ZabbixPort=10050 # zabbix listening port default 10050
+ZabbixPort=10051 # zabbix listening port default 10050
 Broker="x.x.x.x" # broker ip
 
 
