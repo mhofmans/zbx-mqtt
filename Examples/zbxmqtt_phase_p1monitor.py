@@ -1,9 +1,9 @@
 import paho.mqtt.client as mqtt
 from pyzabbix import ZabbixMetric, ZabbixSender
 
-ZabbixServer="172.28.3.150" # zabbix ip
+ZabbixServer="x.x.x.x" # zabbix ip
 ZabbixPort=10051 # zabbix listening port default 10050
-Broker="172.28.3.152" # broker ip
+Broker="x.x.x.x" # broker ip
 
 
 # The callback for when the client receives a CONNACK response from the server.
@@ -19,7 +19,7 @@ def on_message(client, userdata, msg):
     print(msg.topic+" "+str(msg.payload))
 
     packet = [
-        ZabbixMetric(str(msg.topic).split('/')[1], str(msg.topic).split('/')[2], str(msg.payload.decode('utf-8'))),
+        ZabbixMetric(str(msg.topic).split('/')[1], str(msg.topic).split('/')[2], str(msg.payload.decode('utf-8'))), # this means we use host=phase itemkey=l1_v. Make sure to split with / when using p1monitor
     ]
 
     result = ZabbixSender(zabbix_server=ZabbixServer, zabbix_port=ZabbixPort, use_config=None, chunk_size=250).send(packet)
