@@ -17,7 +17,16 @@ Broker="x.x.x.x" # broker ip
 
 Run ZBXMQTT as you prefer. This script is responsible for receiving MQTT data and sending it to Zabbix server, so make sure it is running all the time.
 It's recommended to run it as a service. If this is your preference, ```zbxmqtt.service``` is an example of configuration.
-
+You can also run it in nohup or screen:
+```
+screen -S session_name
+python script.py
+Ctrl-A D
+```
+Reconnect to screen:
+```
+screen -r session_name
+```
 # Zabbix host configuration
 * Create host
 * Set type to Trapper
