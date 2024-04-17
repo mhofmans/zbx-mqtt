@@ -1,4 +1,5 @@
 import paho.mqtt.client as mqtt
+import time
 from pyzabbix import ZabbixMetric, ZabbixSender
 
 ZabbixServer="x.x.x.x" # zabbix ip
@@ -35,4 +36,5 @@ mqttc.connect(Broker, 1883, 60) # broker ip
 # handles reconnecting.
 # Other loop*() functions are available that give a threaded interface and a
 # manual interface.
+time.sleep(10) # 10s delay
 mqttc.loop_forever()
